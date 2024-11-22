@@ -35,34 +35,9 @@ class ContainerRow extends StatelessWidget {
         body: SafeArea(
           child: Row(
             children: [
-              const Text('Container 1'),
-              Container(
-                height: 150.0,
-                width: 100.0,
-                color: Colors.red,
-                padding: EdgeInsets.all(20.0),
-                child: const Image(
-                  image: AssetImage('images/smile.png'),
-                ),
-              ),
-              const Text('Container 2'),
-              Container(
-                color: Colors.yellow,
-                padding: EdgeInsets.all(20.0),
-                child: const Image(
-                  image: NetworkImage(
-                      'https://cdn.prod.website-files.com/5f841209f4e71b2d70034471/60bb4a2e143f632da3e56aea_Flutter%20app%20development%20(2).png'),
-                ),
-              ),
-              const Text('Container 3'),
-              Container(
-                color: Colors.green,
-                padding: EdgeInsets.all(20.0),
-                child: const Image(
-                  image: NetworkImage(
-                      'https://docs.flutter.dev/assets/images/docs/ui/layout/article-hero-image.png'),
-                ),
-              ),
+              Image.asset('bank_card.png'),
+              Text('Second Item'),
+              Text('Third Item'),
             ],
           ),
         ),
