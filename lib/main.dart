@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_basics_widget/basic_widget/Container_Column.dart';
 import 'package:flutter_basics_widget/basic_widget/Container_Row.dart';
+import 'package:flutter_basics_widget/basic_widget/DiceRoll.dart';
+import 'package:flutter_basics_widget/basic_widget/Profile_MiCard.dart';
 
 void main() {
   runApp(const myApp());
@@ -81,7 +83,7 @@ class GridScreen extends StatelessWidget {
     Icons.table_rows_rounded,
     Icons.contacts_rounded,
     Icons.map,
-    Icons.phone,
+    Icons.indeterminate_check_box_rounded,
     Icons.camera,
     Icons.lock,
     Icons.message,
@@ -102,23 +104,31 @@ class GridScreen extends StatelessWidget {
   final List<Widget?> prebuiltScreens = [
     HomeScreen(), // Screen for index 0
     Container_Column(
+        // No screen for index 1
         color: Colors.blue,
         icon: Icons.view_column_rounded,
-        index: 2), // No screen for index 1
+        index: 1),
     ContainerRow(
+        // Screen for index 2
         color: Colors.green,
         icon: Icons.table_rows_rounded,
-        index: 3), // Screen for index 2
-    ProfileScreen(), // No screen for index 3
+        index: 2),
+    Profile_MiCard(
+        // No screen for index 3
+        color: Colors.orange,
+        icon: Icons.contacts_rounded,
+        index: 3),
     MapScreen(), // Screen for index 4
-    // Add more screens or nulls here
+    DiceRoll(
+        color: Colors.yellow,
+        icon: Icons.indeterminate_check_box_rounded,
+        index: 5), // Screen for index 5
     null,
     null,
     null,
     null,
     null,
-    null,
-    null,
+    null, // Add more screens or nulls here
     null,
     null,
     null,
@@ -131,7 +141,7 @@ class GridScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Dynamic Grid with Prebuilt Screens')),
+      appBar: AppBar(title: Text('Dynamic Grid')),
       body: GridView.builder(
         gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
           crossAxisCount: 2, // 2 items per row
