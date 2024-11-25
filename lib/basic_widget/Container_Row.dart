@@ -35,9 +35,21 @@ class ContainerRow extends StatelessWidget {
         body: SafeArea(
           child: Row(
             children: [
-              Image.asset('bank_card.png'),
-              Text('Second Item'),
-              Text('Third Item'),
+              Image.asset('images/bank_card.png'),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.white,
+                margin: EdgeInsets.all(20.0),
+                child: Image.asset('images/success_redd.png'),
+              ),
+              Container(
+                width: 100.0,
+                height: 100.0,
+                color: Colors.pink,
+                margin: EdgeInsets.all(20.0),
+                child: Image.asset('images/nodatafound.png'),
+              ),
             ],
           ),
         ),
