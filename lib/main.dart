@@ -3,6 +3,8 @@ import 'package:flutter_basics_widget/basic_widget/Container_Column.dart';
 import 'package:flutter_basics_widget/basic_widget/Container_Row.dart';
 import 'package:flutter_basics_widget/basic_widget/DiceRoll.dart';
 import 'package:flutter_basics_widget/basic_widget/Profile_MiCard.dart';
+import 'package:flutter_basics_widget/basic_widget/Xylophone.dart';
+import 'package:flutter_basics_widget/basic_widget/quizzler/quizzler.dart';
 
 void main() {
   runApp(const myApp());
@@ -82,9 +84,9 @@ class GridScreen extends StatelessWidget {
     Icons.view_column_rounded,
     Icons.table_rows_rounded,
     Icons.contacts_rounded,
-    Icons.map,
+    Icons.games_rounded,
     Icons.indeterminate_check_box_rounded,
-    Icons.camera,
+    Icons.confirmation_num_rounded,
     Icons.lock,
     Icons.message,
     Icons.school,
@@ -102,7 +104,7 @@ class GridScreen extends StatelessWidget {
 
   // List of prebuilt screens (null if no screen exists for the index)
   final List<Widget?> prebuiltScreens = [
-    HomeScreen(), // Screen for index 0
+    null, // Screen for index 0
     Container_Column(
         // No screen for index 1
         color: Colors.blue,
@@ -118,12 +120,14 @@ class GridScreen extends StatelessWidget {
         color: Colors.orange,
         icon: Icons.contacts_rounded,
         index: 3),
-    MapScreen(), // Screen for index 4
+    // Screen for index 4
+    Quizzler(),
     DiceRoll(
         color: Colors.yellow,
         icon: Icons.indeterminate_check_box_rounded,
         index: 5), // Screen for index 5
     null,
+
     null,
     null,
     null,
