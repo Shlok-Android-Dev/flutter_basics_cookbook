@@ -1,6 +1,5 @@
-//import 'package:flutter/material.dart';
-//mport 'package:audioplayers/audioplayers.dart';
-/*
+import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 class XylophoneApp extends StatelessWidget {
   final AudioPlayer player = AudioPlayer();
@@ -13,12 +12,14 @@ class XylophoneApp extends StatelessWidget {
     return Expanded(
       child: TextButton(
         style: TextButton.styleFrom(
-          backgroundColor: color,
+          padding: EdgeInsets.all(0.0),
+        ),
+        child: Container(
+          color: color,
         ),
         onPressed: () {
           playSound(soundNumber);
         },
-        child: const SizedBox.shrink(),
       ),
     );
   }
@@ -46,6 +47,3 @@ class XylophoneApp extends StatelessWidget {
     );
   }
 }
-
-//void main() => runApp(XylophoneApp());
-*/
