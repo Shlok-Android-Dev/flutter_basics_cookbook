@@ -4,7 +4,11 @@ import 'package:flutter_basics_widget/basic_widget/Container_Row.dart';
 import 'package:flutter_basics_widget/basic_widget/DiceRoll.dart';
 import 'package:flutter_basics_widget/basic_widget/Profile_MiCard.dart';
 import 'package:flutter_basics_widget/basic_widget/Xylophone.dart';
+import 'package:flutter_basics_widget/basic_widget/bgm_calculater/BmiCalculater.dart';
+import 'package:flutter_basics_widget/basic_widget/bitcoin_tracker/bit_Main.dart';
 import 'package:flutter_basics_widget/basic_widget/quizzler/quizzler.dart';
+import 'package:flutter_basics_widget/basic_widget/weather/weatherMain.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const myApp());
@@ -21,38 +25,6 @@ class myApp extends StatelessWidget {
   }
 }
 
-/*class GridScreen extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(title: Text('2 x 10 Grid of Containers')),
-      body: GridView.builder(
-        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-          crossAxisCount: 2, // 2 items per row
-          crossAxisSpacing: 10.0, // Space between columns
-          mainAxisSpacing: 10.0, // Space between rows
-        ),
-        itemCount: 30, // 2 x 10 = 20 items
-        itemBuilder: (context, index) {
-          return Container(
-            decoration: BoxDecoration(
-              color: Colors.blue, // Container color
-              borderRadius: BorderRadius.circular(10.0),
-            ),
-            child: Center(
-              child: Text(
-                'Item ${index + 1}',
-                style: TextStyle(color: Colors.white, fontSize: 16),
-              ),
-            ),
-          );
-        },
-        padding: EdgeInsets.all(10.0), // Padding around the grid
-      ),
-    );
-  }
-}*/
-
 class GridScreen extends StatelessWidget {
   // List of colors for the containers
   final List<Color> colors = [
@@ -63,8 +35,8 @@ class GridScreen extends StatelessWidget {
     Colors.purple,
     Colors.yellow,
     Colors.pink,
+    Color(0xFF250956),
     Colors.cyan,
-    Colors.brown,
     Colors.teal,
     Colors.indigo,
     Colors.lime,
@@ -84,12 +56,12 @@ class GridScreen extends StatelessWidget {
     Icons.view_column_rounded,
     Icons.table_rows_rounded,
     Icons.contacts_rounded,
-    Icons.games_rounded,
-    Icons.indeterminate_check_box_rounded,
-    Icons.confirmation_num_rounded,
-    Icons.lock,
-    Icons.message,
-    Icons.school,
+    Icons.rule_rounded,
+    Icons.casino_outlined,
+    Icons.audiotrack_rounded,
+    Icons.fitness_center,
+    Icons.cloudy_snowing,
+    Icons.currency_bitcoin,
     Icons.shopping_cart,
     Icons.alarm,
     Icons.flight,
@@ -123,13 +95,13 @@ class GridScreen extends StatelessWidget {
     // Screen for index 4
     Quizzler(),
     DiceRoll(
-        color: Colors.yellow,
+        colour: Colors.yellow,
         icon: Icons.indeterminate_check_box_rounded,
         index: 5), // Screen for index 5
-    null,
-
-    null,
-    null,
+    XylophoneApp(),
+    BgmCalculater(),
+    weastherMain(),
+    bit_main(),
     null,
     null,
     null, // Add more screens or nulls here
