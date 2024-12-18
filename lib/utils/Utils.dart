@@ -6,9 +6,9 @@ class Utils {
     print('Toast invoked with message: $message');
     Fluttertoast.showToast(
       msg: message,
-      toastLength: Toast.LENGTH_LONG,
-      gravity: ToastGravity.CENTER,
-      backgroundColor: Colors.red,
+      toastLength: Toast.LENGTH_SHORT,
+      gravity: ToastGravity.BOTTOM,
+      backgroundColor: Colors.transparent,
       textColor: Colors.white,
       fontSize: 16.0,
       timeInSecForIosWeb: 1,
