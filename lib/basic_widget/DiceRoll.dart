@@ -4,17 +4,24 @@ import 'package:flutter/material.dart';
 import 'package:flutter_basics_widget/Utils/Utils.dart';
 
 class DiceRoll extends StatefulWidget {
-  final Color color;
+  const DiceRoll(
+      {super.key,
+      required this.colour,
+      required this.icon,
+      required this.index});
+
+  final Color colour;
   final IconData icon;
   final int index;
 
-  DiceRoll({required this.color, required this.icon, required this.index});
-
   @override
-  State<DiceRoll> createState() => _DiceRollState();
+  State<DiceRoll> createState() => _DiceRollState(colour: colour);
 }
 
 class _DiceRollState extends State<DiceRoll> {
+  _DiceRollState({required this.colour});
+
+  final Color colour;
   int leftButton = 1;
   int rightButton = 1;
   int topDice = 1;
@@ -36,7 +43,7 @@ class _DiceRollState extends State<DiceRoll> {
   Widget build(BuildContext coantext) {
     return MaterialApp(
       home: Scaffold(
-        backgroundColor: Colors.yellow,
+        backgroundColor: colour,
         appBar: AppBar(
           title: Center(
             child: Text(
