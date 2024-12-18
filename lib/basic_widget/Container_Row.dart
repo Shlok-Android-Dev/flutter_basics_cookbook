@@ -29,7 +29,7 @@ class ContainerRow extends StatelessWidget {
         ),
         appBar: AppBar(
           forceMaterialTransparency: false,
-          title: const Text("Container Column..."),
+          title: const Text("Container Row..."),
           backgroundColor: color,
         ),
         body: SafeArea(
